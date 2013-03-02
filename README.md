@@ -35,5 +35,7 @@ Right now it can support any cfw just need rights offsets to work good, by now j
 lv2 protection and later it use hv call lv1_write_htab_entry (so it install hvsc redirect to call hvcalls)
 to apply execution permissions on high area of lv2 0x700000 so we can put executable piece of code right there and apply the right patches that make possible running dynamic recompilers code on PS3 GameOS LV2.
 
+It can work too again by patching lv2_kernel just need to relocate the htab payload address and apply permissions by modifying lv2_kernel.self segments page or in a more easy way by relocating branches of htab_payload to fit it in other space with good execution access known on lv2.
+
 This SOFTWARE is not licensed, approved or endorsed by "Sony Computer Entertainment, Inc." (SCEI), SNEI,
 SEN or any other party.
